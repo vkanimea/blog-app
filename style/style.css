@@ -20,6 +20,24 @@ header {
   background-position: center;
 }
 
+/*
+ Anything within the header is placed infront ie.
+ z-index > 1
+*/
+header > * { 
+ z-index: 10;
+
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.7);
+}
+
 .profile-image {
   width: 100px;
   height: 100px;
@@ -36,6 +54,20 @@ header {
 
 .subtext {
   margin-top: 8px;
+}
+.main {
+  background-color: yellow;
+  height: 100px;
+  margin-top: 32px;
+  display: flex;
+}
+
+.main-container {
+ max-width: 750px;
+ min-width: 600px;
+ width: 100%;
+ padding-left: 16px;
+ padding-right: 16px;
 }
 
 footer {
