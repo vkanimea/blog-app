@@ -24,10 +24,10 @@ header {
  Anything within the header is placed infront ie.
  z-index > 1
 */
-header > * { 
- z-index: 10;
-
+header > * {
+  z-index: 10;
 }
+
 header::after {
   content: "";
   position: absolute;
@@ -35,7 +35,6 @@ header::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.7);
 }
 
 .profile-name {
@@ -43,20 +42,83 @@ header::after {
   font-weight: bold;
 }
 
-.subtext {
-  margin-top: 8px;
-}
+
 .main {
-  margin-top: 32px;
+  margin-top: 64px;
   display: flex;
 }
 
 .main-container {
- max-width: 750px;
- min-width: 600px;
- width: 100%;
- padding-left: 100px;
- padding-right: 100px;
+  max-width: 750px;
+  min-width: 600px;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.post {
+  display: flex;
+  border: 1px solid #eaecee;
+  border-radius: 8px;
+  margin-top: 24px;
+  overflow: hidden;
+  min-height: 200px;
+  transition: all .25s ease;
+  cursor: pointer;
+}
+
+.post:hover {
+  transform: translate3d(0,-5px,0);
+  box-shadow: 0 2rem 5rem 0 rgba(0,0,0,.1);
+}
+
+.post-image {
+  flex-basis: 40%;
+  background-size: cover;
+  background-image: url(/assets/post2.jpg);
+  background-position: center;
+}
+
+.post-content {
+  flex-shrink: 1;
+  flex-basis: 60%;
+  padding: 24px;
+}
+
+.post-date {
+  font-size: 12px;
+  color: #adb5bd;
+  font-weight: 600;
+}
+
+.post-title {
+  font-size: 1.5em;
+  padding-top: 16px;
+  padding-bottom: 4px;
+  color: #333;
+}
+
+.post-title h4 {
+  margin: 0;
+}
+
+.post-text {
+  overflow: hidden;
+  max-height: 65px;
+}
+
+.post-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #495057;
+  line-height: 1.4;
+  margin: 0;
+  word-break: break-all;
+}
+
+.subtext {
+  max-width: 400px;
 }
 
 footer {
@@ -68,53 +130,4 @@ footer {
   align-items: center;
   margin-top: 40px;
   font-size: 14px;
-}
-
-.post {
- display: flex;
- border: 1px solid #eaecee;
- border-radius: 8px;
- min-height: 200px;
- overflow: hidden;
-
-}
-
-.post-image {
-  flex-basis: 40%;
-  background-image: url(https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
-  background-size: cover;
-  background-position: center;
-}
-
-.post-content {
-  flex-basis: 60%;
-  padding: 24px;
-}
-
-.post-date {
- font-size: 12px;
- color: #adb5bd;
- font-weight: 600;
-}
-
-.post-title {
-   margin-top: 16px;
-   font-size: 1.5em;
-   color: #333;
-   font-weight: 600;
-   line-height: 1.4;
-   max-height: 65px;
-   overflow: hidden;
-}
-
-.post-title h4 {
-  margin: 0;
-}
-
-.post-text {
-  margin-top: 4px;
-  color: #495057;
-  font-weight: 400;
-  font-size: 1em;
-
 }
