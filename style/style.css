@@ -20,10 +20,6 @@ header {
   background-position: center;
 }
 
-/*
- Anything within the header is placed infront ie.
- z-index > 1
-*/
 header > * {
   z-index: 10;
 }
@@ -65,18 +61,19 @@ header::after {
   overflow: hidden;
   min-height: 200px;
   transition: all .25s ease;
-  cursor: pointer;
 }
 
 .post:hover {
-  transform: translate3d(0,-5px,0);
-  box-shadow: 0 2rem 5rem 0 rgba(0,0,0,.1);
+   transform: translate3d(0, -5px, 0);
+   box-shadow: 0 2rem 5rem 0 rgba(0,0,0,.26);
+   cursor: pointer;
+
 }
 
 .post-image {
   flex-basis: 40%;
   background-size: cover;
-  background-image: url(/assets/post2.jpg);
+  background-image: url(/assets/post1.jpg);
   background-position: center;
 }
 
@@ -117,6 +114,28 @@ header::after {
   word-break: break-all;
 }
 
+.nav-button.new-post-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    background-color: #004186;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    transition: all 0.25s ease; 
+}
+
+.nav-button.new-post-button:hover {
+  background-color: #002349;
+  cursor: pointer;
+}
+
 .subtext {
   max-width: 400px;
 }
@@ -131,3 +150,4 @@ footer {
   margin-top: 40px;
   font-size: 14px;
 }
+
