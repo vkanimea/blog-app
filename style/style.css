@@ -15,7 +15,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/banner.jpeg);
+  background-image: url(/blog-api/images/banner.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -73,7 +73,7 @@ header::after {
 .post-image {
   flex-basis: 40%;
   background-size: cover;
-  background-image: url(/images/post1.jpg);
+  background-image: url(/blog-app/images/post1.jpg);
   background-position: center;
 }
 
