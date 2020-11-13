@@ -15,7 +15,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/blog-api/images/banner.jpeg);
+  background-image: url(/blog-app/images/banner.jpeg);
   background-size: cover;
   background-position: center;
 }
