@@ -15,7 +15,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/blog-app/images/banner.jpeg);
+  background-image: url(/images/banner.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -38,7 +38,6 @@ header::after {
   font-weight: bold;
 }
 
-
 .main {
   margin-top: 64px;
   display: flex;
@@ -52,7 +51,6 @@ header::after {
   padding-right: 100px;
 }
 
-
 .post {
   display: flex;
   border: 1px solid #eaecee;
@@ -60,20 +58,19 @@ header::after {
   margin-top: 24px;
   overflow: hidden;
   min-height: 200px;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .post:hover {
-   transform: translate3d(0, -5px, 0);
-   box-shadow: 0 2rem 5rem 0 rgba(0,0,0,.26);
-   cursor: pointer;
-
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.26);
+  cursor: pointer;
 }
 
 .post-image {
   flex-basis: 40%;
   background-size: cover;
-  background-image: url(/blog-app/images/post1.jpg);
+  background-image: url(/images/post1.jpg);
   background-position: center;
 }
 
@@ -115,20 +112,20 @@ header::after {
 }
 
 .nav-button.new-post-button {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    background-color: #004186;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-    transition: all 0.25s ease; 
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  background-color: #004186;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.25s ease;
 }
 
 .nav-button.new-post-button:hover {
@@ -157,6 +154,4 @@ footer {
   border: 1px solid #004186;
   border-radius: 5px;
   padding: 5px 8px;
-  
-
 }

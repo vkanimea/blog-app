@@ -8,8 +8,29 @@ window.onload = () => {
 }
 
 const getPosts = () => {
+    fetch(API_URL, {
+       method: 'GET'
+    }).then((response) => {
+          return response.json();      
+    }).then((data) => {
+        buildPosts(data);
+    })
 }
 
 const buildPosts = (blogPosts) => {
+    const postDate = new Date(blogPost.added_date).toDateString();
+    let blogPostContent = "";
+    for (blogPost of blogPosts) {
+       blogPostsContent +=
+       <div class="post">
+        <div class="post-image"></div>
+        <div class="post-content">
+    <div class="post-date>">${postDate}</div>
+    <div class="post-title">${blogPost.title}</div>
+    <div class="post-text">${blogPost.content}</div>
+        </div>
+       </div> 
 
+    }
+    console.log(blogPosts);
 }
