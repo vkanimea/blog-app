@@ -10,27 +10,29 @@ window.onload = () => {
 const getPosts = () => {
     fetch(API_URL, {
        method: 'GET'
-    }).then((response) => {
+    }).then((response)=>{
           return response.json();      
-    }).then((data) => {
+    }).then((data)=>{
         buildPosts(data);
     })
 }
 
 const buildPosts = (blogPosts) => {
-    const postDate = new Date(blogPost.added_date).toDateString();
-    let blogPostContent = "";
+    let blogPostsContent = "";
     for (blogPost of blogPosts) {
-       blogPostsContent +=
+       const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
+       const postImage = `${API_BASE_URL}${blogPost.post_image}`;
+       blogPostsContent += `
        <div class="post">
-        <div class="post-image"></div>
+        <div class="post-image" style="background-image: url(${postImage})"></div>
         <div class="post-content">
-    <div class="post-date>">${postDate}</div>
-    <div class="post-title">${blogPost.title}</div>
-    <div class="post-text">${blogPost.content}</div>
+                <div class="post-date>">${postDate}</div>
+                <div class="post-title">${blogPost.title}</div>
+                <div class="post-text">${blogPost.content}</div>
         </div>
        </div> 
-
+        `  
     }
+    document.querySelector('.blog-posts').innerHTML = blogPostsContent;
     console.log(blogPosts);
 }
