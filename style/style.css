@@ -24,7 +24,7 @@ header > * {
   z-index: 10;
 }
 
-header::after {
+header:after {
   content: "";
   position: absolute;
   top: 0;
@@ -39,7 +39,6 @@ header::after {
 }
 
 .main {
-  margin-top: 64px;
   display: flex;
 }
 
@@ -47,8 +46,8 @@ header::after {
   max-width: 750px;
   min-width: 600px;
   width: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .post {
@@ -59,12 +58,12 @@ header::after {
   overflow: hidden;
   min-height: 200px;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .post:hover {
   transform: translate3d(0, -5px, 0);
   box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.26);
-  cursor: pointer;
 }
 
 .post-image {
