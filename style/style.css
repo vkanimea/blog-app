@@ -70,7 +70,6 @@ header::after {
 .post-image {
   flex-basis: 40%;
   background-size: cover;
-  background-image: url(/images/post1.jpg);
   background-position: center;
 }
 
